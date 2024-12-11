@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/guante_favicon.png" type="image/png">
+    <title>La Velada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-image: url(./img/Boxeo.avif); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .content:target {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+        }
+        th, td {
+            border: 1px solid white; 
+            padding: 8px; 
+            text-align: center; 
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Velada de Boxeo</h1>
+    </header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#peleadores">Peleadores</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#otros">Otros</a>
+    </nav>
+
+    <div id="inicio" class="content">
+        <h2>¿Qué vas a ver?</h2>
+        <p>Mi idea consiste en realizar una página sobre una velada de boxeo que contenga combates tanto de peleadores profesionales como amateur. <br> <br>
+            De estos peleadores sería preciso conocer su edad, altura, peso, alcance y nacionalidad. También se quiere indicar si el pelador es profesional cuál es su ranking dentro de su categoría y cuál es su récord profesional, mientras que si es amateur se pretende saber cuál es su récord amateur. Obviamente no podemos olvidarnos del código del peleador. Los peleadores están entrenados por su respectivo entrenador, del cual queremos saber su nombre, indicar su código identificativo y saber además el gimnasio donde el peleador es entrenado por el entrenador. Además, los peleadores tienen la opción de apadrinar a otro peleador, pero tan sólo a uno. 
+            <br> <br> 
+            En cuanto al combate, es importante conocer el horario de este para saber el orden en el que los combates serán realizados, así como indicar en que esquina estará situado cada peleador del combate. El resultado de este combate lo darán los jurados en caso de que sea necesario indicarlo, ya que puede ocurrir un KO o una lesión que puede hacer terminar el combate antes de llegar a los puntos. De estos jurados es preciso conocer su nombre y su experiencia, así como indicarles un código identificativo.
+            Los combates están dirigidos por los árbitros, que son expertos profesionales de los cuales se debe indicar la experiencia y el nombre, acompañados de su código que identifique a cada uno de los árbitros.
+            
+            <br> <br>
+            Todos los combates ya mencionados ocurren en la Velada. De este Velada es preciso conocer la fecha y el lugar. En esta velada no sólo ocurren los combates, sino que, en los descansos de estos combates, se llevarán acabo diferentes actuaciones tanto musicales como de otro tipo. De las actuaciones guardaremos información sobre el tipo de actuación que es, como de su respectivo horario.
+            La Velada está patrocinada por una serie de patrocinadores específicos, que patrocinan a su vez a los peleadores. De estos patrocinadores deberemos conocer qué tipo de patrocinio ofrecen, es decir, a que se dedica la empresa patrocinadora, así como el nombre de esta. También se le asignará un código para identificar a cada una.
+            
+            <br> <br>
+            Por último, es importante identificar a los clientes, el público en este caso. El público puede comprar una o varias entradas, que son las que les darán acceso a la Velada. De la persona del público que ha comprado la entrada queremos saber su nombre, su teléfono y su correo por si ocurre alguna incidencia, y su edad. Mientras que la información guardada sobre la entrada    
+            será, el tipo de entrada (entrada común, entrada VIP, etc.), el precio de la entrada y el asiento al que corresponde.
+            </p>
+
+            <div style="text-align: center;">
+            <img src="./img/espana.jpg" alt="Mapa" usemap="#zonas">
+            <map name="zonas">
+
+                <area shape="rect" alt="Mapa" coords="310,290,390,340" href="https://boxeociudadreal.es/" title="Gimansio Ciudad Real">
+            
+            </map>
+            </div>
+            <a type="application/rss+xml" href="rss/ejemplorss.xml">
+                <img src="img/rss.png" alt="rss" width="12" height="12">
+                </a>
+    </div>
+
+    <div id="peleadores" class="content">
+        <h2>Peleadores</h2>
+
+    <h2>Tabla Peleadores</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Nacionalidad</th>
+            <th>Altura</th> 
+            <th>Alcance</th> 
+            <th>Peso</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>30</td>
+            <td>Española</td>
+            <td colspan="2">1,90</td> 
+            <td>102kg</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>35</td>
+            <td>Argentina</td>
+            <td>1,75</td>
+            <td>1,80</td>
+            <td>77kg</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>Mexicana</td>
+            <td rowspan="2">1,65</td> 
+            <td rowspan="2">1,62</td> 
+            <td>62kg</td> 
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>28</td>
+            <td>Colombiana</td>
+            <td>65kg</td>
+        </tr>
+    </table>
+
+    </div>
+
+    <div id="contacto" class="content">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas o deseas más información? Contáctanos.</p>
+
+        <form action="datos_personales" method="post">
+            <fieldset>
+            
+            Nombre <br>
+            <input type="text" name="nombre" value="">
+            <br> <br>
+            
+            Apellidos<br>
+            <input type="text" name="apellidos" value="">
+            <br> <br>
+
+            DNI<br>
+            <input type="text" name="dni" value="">
+            <br> <br>
+
+            Edad <br>
+            <input type="radio" name="sexo" value="hombre" checked="checked"> Menor de edad 
+            <input type="radio" name="sexo" value="mujer"> Joven (18-25)
+            <input type="radio" name="sexo" value="mujer"> Adulto (+25)
+            <br> <br>
+
+            </fieldset>
+            <br> <br> 
+
+            <fieldset>
+
+            <label for="descripcion">Descripción del problema</label> <br>
+            <textarea id="descripcion" name="descripcion" cols="40" rows="5"></textarea>
+            <br> <br>
+
+            Fichero adjunto
+            <input type="file" name="adjunto">
+            <br> <br>
+
+            </fieldset>
+            <br> <br> 
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="otros" class="content">
+
+    <div> 
+    <img src="img/Escenario.webp" alt="escenario"> 
+    </div>
+    
+    </div>
+
+    <footer>
+       
+    </footer>
+</body>
+</html>
+
